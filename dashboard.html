@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Smart Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<div class="app">
+  <aside class="side" id="side">
+    <div class="logo"><span class="mark" id="logo"></span> Smart Library</div>
+    <nav id="nav"></nav>
+    <div class="grow"></div>
+    <div class="promo">
+      <b>Student view</b>
+      <p>See what visitors see when they search for a book.</p>
+      <a class="btn full" href="index.html">Open search page</a>
+    </div>
+    <button class="navlink" id="logout"><span id="logoutIcon"></span> Logout</button>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="main">
+    <header class="top">
+      <button class="iconbtn menu" id="menu" aria-label="Menu"></button>
+      <div class="titles">
+        <div class="crumb" id="crumb"></div>
+        <h1 id="title">Dashboard</h1>
+      </div>
+      <div class="gsearch">
+        <span class="gicon" id="gIcon"></span>
+        <input id="gq" data-in="gq" placeholder="Search anything" autocomplete="off">
+        <div class="gres hidden" id="gres"></div>
+      </div>
+      <div class="who"><span class="avatar">A</span><div><b>Admin</b><small>Librarian</small></div></div>
+    </header>
+    <main class="content" id="view"><p class="muted">Loading…</p></main>
+  </div>
+</div>
+
+<div class="overlay" id="modal"><div class="card modal wide" id="modalBox"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
